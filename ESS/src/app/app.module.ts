@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HEADERComponent } from './HEADER/header/header.component';
 import { InicioComponentComponent } from './app-empresa/inicio-component/inicio-component.component';
 import { AcercadeNosotrosComponent } from './app-AcercadeNosotros/acercade-nosotros/acercade-nosotros.component';
 import { ProductosyServiciosComponent } from './app-Productos/productosy-servicios/productosy-servicios.component';
@@ -20,10 +21,10 @@ const appRoutes:Routes=[
 {path:'Registro',component:RegistroComponent},
 {path:'Carrito de compras',component:CarritodeCompraComponent}
 ];
-
 @NgModule({
   declarations: [
     AppComponent,
+    HEADERComponent,
     InicioComponentComponent,
     AcercadeNosotrosComponent,
     ProductosyServiciosComponent,
