@@ -10,6 +10,7 @@ import { ContactoComponent } from './app-Contacto/contacto/contacto.component';
 import { RegistroComponent } from './app-Registro/registro/registro.component';
 import { CarritodeCompraComponent } from './app-CarritodeCompra/carritode-compra/carritode-compra.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes:Routes=[
 {path:'',component:InicioComponentComponent},
@@ -19,6 +20,7 @@ const appRoutes:Routes=[
 {path:'Registro',component:RegistroComponent},
 {path:'Carrito de compras',component:CarritodeCompraComponent}
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,8 @@ const appRoutes:Routes=[
     ProductosyServiciosComponent,
     ContactoComponent,
     RegistroComponent,
-    CarritodeCompraComponent
+    CarritodeCompraComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

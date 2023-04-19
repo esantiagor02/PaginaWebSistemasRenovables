@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.bg-dark-light {
+    background: #4765B4!important;
+    color:white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+ 
+    
+    
+}
+.derechos {
+    background: black ;
+    color:white;
+}
+.logo {
+    display: flex;
+    
+}
+.fb {
+    background: blue;
+}
+hr {
+    background: white;
+    border-color: white;
+}
