@@ -6,9 +6,7 @@
 .bg-dark-light {
     background: #4765B4!important;
     color:white;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+margin-top: auto;
  
     
     
@@ -17,12 +15,27 @@
     background: black ;
     color:white;
 }
-.logo {
+.logo_1 {
     display: flex;
-    
+    width: 85%;
 }
-.fb {
-    background: blue;
+
+.redes {
+    padding: 20px;
+    float: right;
+}
+.redes a i:hover, a i:active{
+    color: #00AF7B;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.text-white {
+    text-align: center;
+}
+.social {
+padding: 5px;
+color: white;
 }
 hr {
     background: white;

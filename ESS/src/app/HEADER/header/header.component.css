@@ -45,6 +45,7 @@
 .menu_items li:hover , li:active {
     background-color: #00AF7B;
     transition: .4s;
+    cursor: pointer;
 }
 .btn_menu{
     margin-right: 30px;
