@@ -12,6 +12,11 @@ import { RegistroComponent } from './app-Registro/registro/registro.component';
 import { CarritodeCompraComponent } from './app-CarritodeCompra/carritode-compra/carritode-compra.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { BateriaComponent } from './app-baterias/bateria/bateria.component';
+import { PanelesComponent } from './app-paneles/paneles/paneles.component';
+import { InversoresComponent } from './app-inversores/inversores/inversores.component';
+import { EquiposComponent } from './app-equipos/equipos/equipos.component';
+import { SistemasComponent } from './app-sistemas/sistemas/sistemas.component';
 
 const appRoutes:Routes=[
 {path:'',component:InicioComponentComponent},
@@ -19,7 +24,12 @@ const appRoutes:Routes=[
 {path:'Productos y servicios',component:ProductosyServiciosComponent},
 {path:'Contacto',component:ContactoComponent},
 {path:'Registro',component:RegistroComponent},
-{path:'Carrito de compras',component:CarritodeCompraComponent}
+{path:'Carrito de compras',component:CarritodeCompraComponent},
+{path:'Baterías',component:BateriaComponent},
+{path:'Paneles Solares',component:PanelesComponent},
+{path:'Inversores',component:InversoresComponent},
+{path:'Equipos de distribución Energética',component:EquiposComponent},
+{path:'Sistemas de instalación y control',component:SistemasComponent}
 ];
 @NgModule({
   declarations: [
@@ -31,7 +41,12 @@ const appRoutes:Routes=[
     ContactoComponent,
     RegistroComponent,
     CarritodeCompraComponent,
-    FooterComponent
+    FooterComponent,
+    BateriaComponent,
+    PanelesComponent,
+    InversoresComponent,
+    EquiposComponent,
+    SistemasComponent
   ],
   imports: [
     BrowserModule,
