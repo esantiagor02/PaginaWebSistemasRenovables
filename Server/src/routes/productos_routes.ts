@@ -1,5 +1,5 @@
 import { Router } from "express";
-
+import productosController  from '../controllers/productoscontroller';
 class ProductosRoutes {
     public router: Router= Router();
 
@@ -7,7 +7,7 @@ class ProductosRoutes {
         this.config();
     }
     config(): void {
-        this.router.get('/',(req,res)=> res.send('PRODUCTOS'));
+        this.router.get('/',productosController.index);
     }
 }
 const Productos_routes = new ProductosRoutes();
