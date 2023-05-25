@@ -17,6 +17,7 @@ import { PanelesComponent } from './app-paneles/paneles/paneles.component';
 import { InversoresComponent } from './app-inversores/inversores/inversores.component';
 import { EquiposComponent } from './app-equipos/equipos/equipos.component';
 import { SistemasComponent } from './app-sistemas/sistemas/sistemas.component';
+import { CardsComponent } from './cards/cards.component';
 
 const appRoutes:Routes=[
 {path:'',component:InicioComponentComponent},
@@ -46,7 +47,8 @@ const appRoutes:Routes=[
     PanelesComponent,
     InversoresComponent,
     EquiposComponent,
-    SistemasComponent
+    SistemasComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
