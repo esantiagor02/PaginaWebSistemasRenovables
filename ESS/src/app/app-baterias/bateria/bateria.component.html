@@ -1,4 +1,12 @@
-<div class="container justify-content-center align-items-center h-100">
-    <h2 *ngFor="let item of myData">Data: {{ item.nombre }}</h2>
-    <app-cards></app-cards>
+<div class="container justify-content-center align-items-center  ">
+    <h1 class="text-center">Baterías</h1>
+    <hr>
 </div>
+<div class="container justify-content-center align-items-center h-100 d-flex">
+    <div class="card-deck">
+        <div class="row">
+            <app-cards [datos]="item"*ngFor="let item of myData" class="col-md-4 "></app-cards>
+        </div>
+        
+    </div>
+
