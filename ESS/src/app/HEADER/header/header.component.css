@@ -63,5 +63,27 @@
     background-color: rgba(110, 74, 42,0.3);
     transition: .4s;
 }
+.close-tab {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: white;
+    z-index: 9999;
+    font-size: 24px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+  }
 
-
+  button {
+    background-color: blue; /* Fondo de color azul */
+    color: white; /* Texto en color blanco */
+    padding: 10px 20px; /* Espacio interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: darkblue; /* Fondo de color azul oscuro al pasar el cursor */
+  }

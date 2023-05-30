@@ -1,0 +1,48 @@
+.login-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro transparente */
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  color: white; 
+  transition:  0.7s ;/* Color del texto */
+}
+
+.login-popup h3 {
+  margin-top: 0; /* Eliminar margen superior del título */
+}
+
+.login-popup form {
+  margin-top: 20px; /* Espacio superior entre el título y el formulario */
+}
+
+.login-popup input,
+.login-popup button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.login-popup button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
+
+.login-popup button:hover {
+  background-color: #45a049;
+}
+
+  
+  
+  
+  
+  
+  

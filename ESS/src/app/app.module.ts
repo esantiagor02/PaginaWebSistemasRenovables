@@ -18,6 +18,7 @@ import { InversoresComponent } from './app-inversores/inversores/inversores.comp
 import { EquiposComponent } from './app-equipos/equipos/equipos.component';
 import { SistemasComponent } from './app-sistemas/sistemas/sistemas.component';
 import { CardsComponent } from './cards/cards.component';
+import { LoginPopupComponent } from './login-popup/login-popup.component';
 
 const appRoutes:Routes=[
 {path:'',component:InicioComponentComponent},
@@ -48,7 +49,8 @@ const appRoutes:Routes=[
     InversoresComponent,
     EquiposComponent,
     SistemasComponent,
-    CardsComponent
+    CardsComponent,
+    LoginPopupComponent
   ],
   imports: [
     BrowserModule,

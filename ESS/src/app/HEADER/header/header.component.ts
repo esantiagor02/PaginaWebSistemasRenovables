@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HEADERComponent {
 
+  isPopupVisible = false;
+
+  openPopup() {
+    this.isPopupVisible = true;
+  }
+  closePopup() {
+    this.isPopupVisible = false;
+  }
 }

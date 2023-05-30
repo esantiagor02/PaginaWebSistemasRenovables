@@ -1,14 +1,7 @@
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
+<span class="close-tab"  *ngIf="isPopupVisible == true" (click)="closePopup()">X</span>
     <nav class="menu2">
         <label></label>
-        <ul class="menu_items2">
-            <li class="active" ><a href="">Iniciar sesion</a></li>
-        </ul>
+        <button class="login-button" (click)="openPopup()">Iniciar sesión</button>
     </nav> 
     <nav class="menu">
         <label class="logo" href="/Logo.ico">ESS</label>
@@ -19,5 +12,4 @@
             <li><a href="/Contacto">Contacto</a></li>
         </ul>
     </nav> 
-</body>
-</html>
+    <app-login-popup *ngIf="isPopupVisible"></app-login-popup>

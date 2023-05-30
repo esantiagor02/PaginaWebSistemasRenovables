@@ -17,15 +17,26 @@ export class BateriaComponent  implements OnInit{
     console.log("Baterias");
     this.getPost();
   }
-  getPost(){
-    fetch('https://flask-production-6776.up.railway.app/productos')
+
+  getPost() {
+    const groupId = '2';
+    
+    fetch('https://flask-production-6776.up.railway.app/productoByGroup?id=' + groupId, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+      },
+      
+    })
       .then(response => response.json())
-      .then(json => {
-        this.myData = json; // Almacena la respuesta en la variable "myData"
-        console.log(this.myData); // Opcionalmente, puedes imprimir la respuesta en la consola
+      .then(data => {
+        this.myData = data; // Store the response in the "myData" variable
+        console.log(this.myData); // Optionally, you can log the response to the console
+      })
+      .catch(error => {
+        console.error('Error:', error);
       });
   }
-
   
 
 }
