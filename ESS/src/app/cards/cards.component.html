@@ -1,12 +1,12 @@
 <div class="margen">
   <div class="card text-center ">
     <div class="overflow">
-      <img [src]="datos.image" alt="Imagen del producto" class="card-img-top" />
+      <img [src]="datos.imagen" alt="Imagen del producto" class="card-img-top" />
     </div>
     <div class="card-body text-light">
       <h4 class="card-title">{{datos.nombre}}</h4>
       <p class="card-text ">
-        {{ datos.informacion ? datos.informacion : 'No hay información disponible' }}
+         Costo: {{ datos.precio ? datos.precio : 'No hay precio disponible' }}
       </p>
       <a [href]="datos.enlace" class="btn btn-outline-secondary rounded-0" target="_blank">
         Comprar producto
