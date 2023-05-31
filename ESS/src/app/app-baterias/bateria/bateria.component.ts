@@ -35,7 +35,7 @@ export class BateriaComponent  implements OnInit{
       })
       .catch(error => {
         console.error('Error:', error);
-      });
+      }); 
   }
   
 
