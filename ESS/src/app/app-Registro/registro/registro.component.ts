@@ -1,9 +1,4 @@
-import { Component, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-
-
-import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-registro',
@@ -15,8 +10,6 @@ export class RegistroComponent {
   email?: string;
   password?: string;
 
-  // constructor(private http: HttpClient) {}
-
   enviarDatos() {
     const datos = {
       nombre: this.nombre,
@@ -24,21 +17,28 @@ export class RegistroComponent {
       password: this.password
     };
 
-    // this.enviarAPI(datos);
+    this.enviarAPI(datos);
   }
 
-  // enviarAPI(datos: any) {
-  //   this.http.post('URL_DE_TU_API', datos)
-  //     .subscribe(
-  //       response => {
-  //         // Manejar la respuesta de la API
-  //         console.log(response);
-  //       },
-  //       error => {
-  //         // Manejar el error en caso de que ocurra
-  //         console.error(error);
-  //       }
-  //     );
-  // }
-}
+  enviarAPI(datos: any) {
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(datos)
+    };
 
+    fetch('https://flask-production-6776.up.railway.app/insertarusuario', requestOptions)
+      .then(response => response.json())
+      .then(data => {
+        // Manejar la respuesta de la API
+        console.log(data);
+        if (data.message === 'creado exitosamente') {
+          // Realizar las acciones necesarias después de la creación exitosa
+        }
+      })
+      .catch(error => {
+        // Manejar el error en caso de que ocurra
+        console.error(error);
+      });
+  }
+}
