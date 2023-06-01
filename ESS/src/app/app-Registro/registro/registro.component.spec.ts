@@ -1,23 +1,34 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-import { RegistroComponent } from './registro.component';
+@Component({
+  selector: 'app-registro',
+  templateUrl: './registro.component.html',
+  styleUrls: ['./registro.component.css']
+})
+export class RegistroComponent {
+  nombre?: string;
+  email?: string;
+  password?: string;
 
-describe('RegistroComponent', () => {
-  let component: RegistroComponent;
-  let fixture: ComponentFixture<RegistroComponent>;
+  constructor(private http: HttpClient) {}
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ RegistroComponent ]
-    })
-    .compileComponents();
+  enviarDatos() {
+    const datos = {
+      nombre: this.nombre,
+      email: this.email,
+      password: this.password
+    };
 
-    fixture = TestBed.createComponent(RegistroComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    this.enviarAPI(datos);
+  }
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  async enviarAPI(datos: any) {
+    try {
+      const response = await this.http.post<any>('https://flask-production-6776.up.railway.app/insertarusuario', datos).toPromise();
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+}
