@@ -15,7 +15,7 @@ export class RegistroComponent {
   email?: string;
   password?: string;
 
-  constructor(private http: HttpClient) {}
+  // constructor(private http: HttpClient) {}
 
   enviarDatos() {
     const datos = {
@@ -24,21 +24,21 @@ export class RegistroComponent {
       password: this.password
     };
 
-    this.enviarAPI(datos);
+    // this.enviarAPI(datos);
   }
 
-  enviarAPI(datos: any) {
-    this.http.post('URL_DE_TU_API', datos)
-      .subscribe(
-        response => {
-          // Manejar la respuesta de la API
-          console.log(response);
-        },
-        error => {
-          // Manejar el error en caso de que ocurra
-          console.error(error);
-        }
-      );
-  }
+  // enviarAPI(datos: any) {
+  //   this.http.post('URL_DE_TU_API', datos)
+  //     .subscribe(
+  //       response => {
+  //         // Manejar la respuesta de la API
+  //         console.log(response);
+  //       },
+  //       error => {
+  //         // Manejar el error en caso de que ocurra
+  //         console.error(error);
+  //       }
+  //     );
+  // }
 }
 
